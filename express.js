@@ -20,10 +20,11 @@ app.post('/bfhl', (req, res) => {
             user_id: "john_doe_17091999",  // Replace with your actual details
             email: "john@xyz.com",
             roll_number: "ABCD123",
-            numbers:  "[“1”,”334”,”4”]",
-            alphabets:  "[“M”,”B”]",
-            highest_alphabet: "[“M”]"
+            numbers: numbers,  // Keep as an array
+            alphabets: alphabets,  // Keep as an array
+            highest_alphabet: highestAlphabet  // Keep as an array
         });
+        
     } catch (err) {
         res.status(500).json({ is_success: false, error: err.message });
     }
